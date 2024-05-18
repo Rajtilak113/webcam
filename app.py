@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, send_from_directory
 from ultralytics import YOLO
 import cv2
 import cvzone
@@ -85,8 +85,7 @@ def gen():
 
 @app.route('/')
 def index():
-    # '.' indicates the current directory
-    return send_from_directory('.', 'index.html')
+    return render_template('index.html')
 
 @app.route('/video_feed')
 def video_feed():
