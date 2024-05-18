@@ -1,5 +1,4 @@
-flask
+Flask==2.1.1
 ultralytics
-cvzone
-matplotlib>=3.2.2
-opencv-python==4.5.4.60
+opencv-python-headless==4.5.5.64
+cvzone==1.5.6
