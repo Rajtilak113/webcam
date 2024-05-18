@@ -85,7 +85,8 @@ def gen():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # '.' indicates the current directory
+    return send_from_directory('.', 'index.html')
 
 @app.route('/video_feed')
 def video_feed():
